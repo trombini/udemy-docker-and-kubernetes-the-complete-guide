@@ -7,4 +7,4 @@ before_install:
   - docker build -t riccardo/udemy-docker-kubernetes -f Dockerfile.dev .
 
 script:
-  - docker run riccardo/udemy-docker-kubernetes npm run test -- --coverage
+  - docker run -e CI=true riccardo/udemy-docker-kubernetes npm run test
